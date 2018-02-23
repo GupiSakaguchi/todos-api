@@ -25,7 +25,7 @@ require 'rspec/rails'
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
-
+require 'shoulda-matchers'
 require 'database_cleaner'
 # configure shoulda matchers to use rspec as the test framework and full matcher libraries for rails
 Shoulda::Matchers.configure do |config|
@@ -34,8 +34,6 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
-
-
 
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
